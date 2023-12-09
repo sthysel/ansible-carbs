@@ -1,0 +1,12 @@
+---
+- name: Install entropy service
+  community.general.pacman:
+    name:
+      - rng-tools
+      - opensc
+
+- name: Enable entropy service
+  ansible.builtin.systemd:
+    enabled: true
+    state: started
+    name: rngd

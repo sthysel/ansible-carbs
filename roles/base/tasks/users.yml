@@ -1,0 +1,22 @@
+---
+- name: Ensure users are present with zsh shell and home directories
+  ansible.builtin.user:
+    name: "{{ item.name }}"
+    state: present
+    shell: /usr/bin/zsh
+    create_home: yes
+    groups: "{{ item.groups | default(omit) }}"
+  loop:
+    - name: thys
+      groups: wheel
+    - name: bro
+      groups: wheel
+    - name: pia
+
+- name: Ensure sudoers file allows 'wheel' group members to have passwordless sudo
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers
+    state: present
+    regexp: '^%wheel'
+    line: '%wheel ALL=(ALL) NOPASSWD: ALL'
+    validate: 'visudo -cf %s'

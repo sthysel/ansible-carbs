@@ -1,0 +1,31 @@
+
+- name: Install some universally useful packages
+  kewlfft.aur.aur:
+    use: yay
+    name:
+      - archlinux-keyring
+      - aspell-en
+      - aspell-uk
+      - base-devel
+      - bat
+      - curl
+      - git
+      - htop
+      - imagemagick
+      - inxi
+      - lsd
+      - make
+      - man
+      - ncdu
+      - neofetch
+      - networkmanager
+      - pacman-contrib
+      - pyenv
+      - ranger
+      - rsync
+      - stow
+      - trash-cli
+      - wget
+      - zsh
+      - zsh-theme-powerlevel10k
+    state: present

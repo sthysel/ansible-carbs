@@ -1,0 +1,12 @@
+- name: Music
+  kewlfft.aur.aur:
+    name:
+      - pavucontrol
+      - pulsemixer
+      - playerctl
+      - mpd
+      # terminal interface for mpd
+      - mpc
+      - ncmpcpp
+      - vlc
+    state: present
