@@ -1,11 +1,4 @@
 ---
 - hosts: all
   roles:
-    - name: jahrik.yay
-      install: true
-      tags:
-        - always
     - name: base
-    - name: desktop
-      tags:
-        - desktop

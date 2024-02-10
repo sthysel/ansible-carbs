@@ -32,8 +32,10 @@ qa/all:  ## Run pre-commit QA pipeline on all files
 deploy: ## Deploy against inventory
 	echo "Limiting deployment to ${LIMIT}"
 	poetry run ansible-playbook \
-		-u thys \
-		-i inventories/ \
+    -vvvv \
+		--user thys \
+    --ask-become-pass \
+		--inventory inventories/ \
 		--limit ${LIMIT} \
 		--tags ${TAGS} \
 		provision.yml

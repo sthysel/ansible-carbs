@@ -7,8 +7,6 @@
     create_home: yes
     groups: "{{ item.groups | default(omit) }}"
   loop:
-    - name: thys
-      groups: wheel
     - name: bro
       groups: wheel
     - name: pia
