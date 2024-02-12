@@ -1,0 +1,32 @@
+---
+- name: Install gnome core
+  become_user: yaywalker
+  kewlfft.aur.aur:
+    use: yay
+    name:
+      - gnome
+      - gnome-shell
+      - gnome-terminal
+    state: present
+    update_cache: yes
+
+- name: Install gnome extras
+  become_user: yaywalker
+  kewlfft.aur.aur:
+    use: yay
+    name:
+      - gnome-extra
+      - gnome-tweaks
+      - gnome-shell-extensions
+      - gnome-themes-extra
+      - gnome-shell-extension-clipboard-indicator
+      - gnome-shell-extension-openweather
+      - gst-plugin-pipewire # for screen recording
+    state: present
+    update_cache: yes
+
+- name: Enable GDM (GNOME Display Manager)
+  ansible.builtin.systemd:
+    name: gdm
+    enabled: yes
+    state: started

@@ -5,6 +5,7 @@
 # ubxtool -p COLDBOOT
 
 - name: Install gpsd
+  become_user: yaywalker
   kewlfft.aur.aur:
     use: yay
     name:

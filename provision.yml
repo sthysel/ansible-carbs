@@ -6,4 +6,5 @@
   roles:
     - name: base
     - name: i3
+    - name: gnome-desktop
     - name: navigation
