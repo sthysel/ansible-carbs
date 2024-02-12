@@ -1,12 +1,13 @@
 
 - name: Install OpenCPN and some plugins
+  become_user: yaywalker
   kewlfft.aur.aur:
     use: yay
     name:
       - opencpn
       - opencpn-plugin-o_charts
       - opencpn-plugin-climatology
-      # - opencpn-plugin-route
-      # - opencpn-plugin-weatherfax
+      - opencpn-plugin-route
+      - opencpn-plugin-weatherfax
       - opencpn-plugin-weatherrouting
     state: present

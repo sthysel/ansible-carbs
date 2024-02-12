@@ -1,5 +1,6 @@
 
 - name: Install i3 and things it needs
+  become_user: yaywalker
   kewlfft.aur.aur:
     use: yay
     name:

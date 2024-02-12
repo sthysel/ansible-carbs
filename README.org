@@ -1,7 +1,8 @@
 * Provisions daily driver arch linux machines (Version 0.1.0)
 
-This [[https://www.ansible.com/][Ansible]] playbook builds out a daily driver desktop system on a
-Arch Linux host. It installs common software and pulls in the common carbs config from the seperate carcbs config repo.
+This [[https://www.ansible.com/][Ansible]] playbook builds out a daily driver desktop system on a Arch Linux
+host. It installs common software and pulls in the common carbs config from the
+separate carbs config repository.
 
 ** Pre-requisites
 - A general minimal Arch Linux install target

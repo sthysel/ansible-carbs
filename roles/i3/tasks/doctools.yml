@@ -7,6 +7,7 @@
     extra_args: --recursive
 
 - name: Install documentation generation tools pandoc and latex
+  become_user: yaywalker
   kewlfft.aur.aur:
     name:
       - pandoc-bin

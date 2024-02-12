@@ -28,4 +28,6 @@
       - wget
       - zsh
       - zsh-theme-powerlevel10k
+      - vim
+      - emacs
     state: present

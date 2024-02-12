@@ -1,5 +1,6 @@
 
 - name: Video
+  become_user: yaywalker
   kewlfft.aur.aur:
     name:
       - mpv

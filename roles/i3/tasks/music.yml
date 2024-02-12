@@ -1,4 +1,5 @@
 - name: Music
+  become_user: yaywalker
   kewlfft.aur.aur:
     name:
       - pavucontrol

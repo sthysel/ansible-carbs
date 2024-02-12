@@ -1,6 +1,5 @@
 
 - name: Install ntp
-  become_user: thys
   kewlfft.aur.aur:
     use: yay
     name:
@@ -9,7 +8,6 @@
     state: present
 
 - name: Using ntpd with gpsd
-  become_user: thys
   ansible.builtin.copy:
     dest: /etc/ntp.conf
     content: |

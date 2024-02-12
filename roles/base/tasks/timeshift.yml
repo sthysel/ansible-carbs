@@ -1,4 +1,5 @@
 - name: Install timeshift
+  become_user: yaywalker
   kewlfft.aur.aur:
     use: yay
     name:

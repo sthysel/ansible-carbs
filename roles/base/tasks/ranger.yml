@@ -1,6 +1,6 @@
 - name: Install ranger and its useful dependencies
   become: true
-  become_user: thys
+  become_user: yaywalker
   kewlfft.aur.aur:
     use: yay
     name:
