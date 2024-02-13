@@ -4,7 +4,7 @@
   become_user: root
   roles:
     - name: base
-    - name: carbs
+    - name: dotfiles
     - name: i3
     - name: gnome-desktop
     - name: navigation

@@ -14,7 +14,7 @@
 - name: Pull carbs from github
   become_user: thys
   ansible.builtin.git:
-    repo: 'git@github.com:sthysel/carbs.git'
-    dest: '/home/thys/carbs'
+    repo: "{{ repo_url }}"
+    dest: "{{ dotfiles_path }}"
     update: yes
     accept_hostkey: yes
