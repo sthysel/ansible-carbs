@@ -1,0 +1,20 @@
+
+- name: Make sure git is installed
+  become_user: yaywalker
+  kewlfft.aur.aur:
+    use: yay
+    name:
+      - git
+    state: present
+
+# use the user with the keys in its agent
+# SSH_AUTH_SOCK Environment Variable: When using SSH agent forwarding with sudo,
+# the SSH_AUTH_SOCK environment variable needs to be preserved. You can ensure
+# this by adding Defaults env_keep += "SSH_AUTH_SOCK" to your sudoers file
+- name: Pull carbs from github
+  become_user: thys
+  ansible.builtin.git:
+    repo: 'git@github.com:sthysel/carbs.git'
+    dest: '/home/thys/carbs'
+    update: yes
+    accept_hostkey: yes

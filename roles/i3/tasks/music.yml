@@ -6,7 +6,6 @@
       - pulsemixer
       - playerctl
       - mpd
-      # terminal interface for mpd
       - mpc
       - ncmpcpp
       - vlc
